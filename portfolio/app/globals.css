@@ -1,14 +1,32 @@
 @import "tailwindcss";
 
+:root{
+  --bg-color-1: #000ED1;
+  --bg-color-2: rgba(3, 14, 166, 1);
+}
+
+body {
+  background-color: var(--bg-color-2);
+
+  /* animation: bgLoop 15s infinite alternate; */
+}
+
+/* @keyframes bgLoop {
+  from {background-color: var(--bg-color-1);}
+  to {background-color: var(--bg-color-2);}
+} */
+body * {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000000;
+}
+
 
 .job{
   margin: 0 0 30px 0;
 }
-
 .job-company{
 
 }
-
 .job-title{
   font-style: italic
 }
@@ -16,3 +34,79 @@
 .job-city{
 
 }
+li.skill{
+
+}
+
+.skill ul{
+  margin-left: 10px;
+}
+
+.skill ul li{
+  font-size: 0.9em;
+}
+
+.education{
+  margin: 0 0 30px 0;
+}
+.edu-city{
+
+}
+.edu-city{
+
+}
+
+.edu-program{
+
+}
+
+.portrait{
+  margin: 0 auto;
+  width: 30%;
+  min-width: 500px;
+  height: auto;
+  position: relative;
+}
+.portrait img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* bg frame */
+
+.framed-img::after{
+  content: ' ';
+  background: url("/frame-bg.png") center no-repeat ;
+  background-size: cover;
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  z-index: -1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* .framed-image::before{
+  content: ' ';
+  background-image: url("/frame-bg.png") no-repeat center cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+} */
+
+/* .framed-image:hover ::before{
+
+} */
+
+
+/* utility classes */
+
+.height-fit{
+  height: fit-content;
+}
+
